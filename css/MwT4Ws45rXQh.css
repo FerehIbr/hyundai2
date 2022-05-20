@@ -1,0 +1,22 @@
+.randevuBox{
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+@media(max-width:768px){
+    .randevuBox{
+        width: 80%;
+    }
+}
+
+
+.randevuBox__input{
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.btnWrap.btnSpaWrap.randevuBox__button{
+    margin-top: 30px !important;
+}

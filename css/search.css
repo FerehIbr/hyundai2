@@ -1,0 +1,1181 @@
+@charset "utf-8";
+
+/* search */
+.gnbWrapFull .gnbUtilWrap {
+    background: #f2f2f2;
+    position: relative;
+    height: 0;
+    transition: all 0.3s;
+}
+.gnbWrapFull .gnbUtilWrap.search {
+    height: 90px;
+} /*GT디자인가이드_20 190227*/
+.gnbWrapFull .gnbSearchArea {
+    width: 1120px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 71px;
+    display: none;
+} /*GT디자인가이드_20 190227*/
+.gnbWrapFull .gnbSearchArea .gnbSearch .btnSearch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 55px;
+    text-align: center;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; /*background:url("/etc/designs/hyundai/ww/en/images/common/btn-search.png") no-repeat center center*/
+    overflow: hidden;
+    text-indent: -99999px;
+    background: url("../images/O1z3JJdov52O.png") no-repeat center center;
+} /*GT디자인가이드_20 190225 (BG경로 변경)*/
+.gnbWrapFull .gnbSearchArea .gnbSearch .btnReset {
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 25px;
+    margin-top: -10px;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url("../btn-reset.html") no-repeat center center;
+    text-indent: -99999px;
+    background: url("../images/SQFA4cV1F65I.png") no-repeat center center;
+} /*GT디자인가이드_20 190225 (BG경로 변경)*/
+.gnbWrapFull .gnbSearchArea .gnbSearch .btnReset.on {
+    display: block;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList {
+    background: #fff; /*display:none;*/
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+} /*GT디자인가이드_20 190227 */
+.gnbWrapFull .gnbSearchArea .gnbSearch .autoSearch {
+    border-top: 1px solid #063162;
+    background: #fff;
+    text-align: left;
+    margin: 0 auto;
+    width: auto;
+    padding: 0 10px 0 20px;
+} /*GT디자인가이드_20 190227*/
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .list .link {
+    text-transform: uppercase;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .list:nth-child(1) {
+    border-top: none;
+    margin-top: 10px;
+}
+
+/* gnb recent search css 추가 (최근 검색어) */ /* GT디자인가이드_20 190228*/
+.gnbWrapFull .gnbautoSearchListWrap {
+    padding: 0 20px;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch {
+    display: none;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch.on {
+    display: block;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .autoSearch {
+    padding-bottom: 0px;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .list {
+    position: relative;
+    text-transform: uppercase;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .list .link {
+    color: #666;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .list .link .keyword {
+    color: #000;
+    font-family: "HyundaiMedium";
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .btn-delete {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 10px;
+    background: url("../images/vXmInkX186yP.gif") no-repeat center center;
+    text-indent: -99999px;
+}
+.gnbWrapFull .recentSearch .all_delete {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .all_delete .btn_all_delete {
+    color: #999;
+    text-align: left;
+    padding: 20px 0;
+    margin: 0 20px;
+    border-top: 1px solid #d8d8d8;
+}
+/* //gnb recent search css 추가 (최근 검색어) */ /* GT디자인가이드_20 190228*/
+
+/* mobile search btn 클릭 시 background (black) 생성*/ /* GT디자인가이드_20 190228*/
+.searchEngine.dimmed {
+    display: none;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+}
+
+@media screen and (max-width: 1240px) {
+    .gnbWrapFull .gnbSearchArea {
+        width: 768px;
+    }
+    .gnbWrapFull .gnbSearchArea .gnbSearch {
+        /*width:290px; */
+        width: 430px;
+    } /*GT디자인가이드_20 190227*/
+}
+@media screen and (max-width: 1024px) {
+    .gnbWrapFull .gnbSearchArea {
+    }
+    .gnbWrapFull .gnbSearchArea .gnbSearch {
+        /*width:290px;*/
+    } /*GT디자인가이드_20 190227*/
+}
+
+@media screen and (max-width: 767px) {
+    .gnbWrapFull .gnbUtilWrap.search {
+        display: none;
+    } /*GT디자인가이드_20 190227*/
+    .gnbWrapFull .gnbSearchArea {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 55px;
+        display: none;
+        width: 100%;
+        padding: 0;
+    } /*GT디자인가이드_20 190227*/
+    .gnbWrapFull .gnbSearchArea .gnbSearch {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        border-bottom: 1px solid #dcdcdc;
+        box-sizing: border-box;
+    }
+    .gnbWrapFull .gnbSearchArea .gnbSearch .searchInput {
+        position: relative;
+        font-weight: normal;
+        background: #00aad2;
+        background: #fff;
+        padding-right: 60px;
+    } /*GT디자인가이드_20 190227*/
+    .gnbWrapFull .gnbSearchArea .gnbSearch .searchInput .inputText {
+        width: 100%;
+        border: 0;
+        padding-right: 55px;
+        font-size: 16px;
+        line-height: normal;
+        height: 60px;
+        background: #00aad2;
+        color: #fff;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 15px;
+        background: #fff;
+        color: #666;
+    } /*GT디자인가이드_02 190227*/
+    .gnbWrapFull .gnbSearchArea .gnbSearch .btnSearch {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 45px;
+        text-align: center;
+        height: 60px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url("../images/ico-search-20-x-20%25402x.png") no-repeat center center;
+        overflow: hidden;
+        text-indent: -99999px;
+        -webkit-background-size: 20px auto;
+        background-size: 20px auto;
+        width: 60px;
+    } /*GT디자인가이드_20 190227*/
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList {
+        background: #fff; /*display:none;*/
+        position: absolute;
+        left: 0;
+        top: 60px;
+        width: 100%;
+    } /*GT디자인가이드_20 190227*/
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .list {
+        border-top: 1px solid #f1f1f1;
+        display: none;
+    } /*GT디자인가이드_20 190304*/
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .list:nth-child(1),
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .list:nth-child(2),
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .list:nth-child(3),
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .list:nth-child(4) {
+        display: block;
+    } /*GT디자인가이드_20 (190304 Mobile일 때 타이틀 포함 4개까지만 보여주기) */
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList {
+        background: #fff; /*display:none;*/
+        position: absolute;
+        left: 0;
+        top: 60px;
+        width: 100%;
+    } /*GT디자인가이드_02 190227*/
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList .autoSearch {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /*mobile search btn style 추가 GT디자인가이드_20 190227*/
+    .gnbWrapFull .gnbWrap .topBar .rightArea .btnMobileSearch {
+        float: left;
+        background: url("../btn-search.png%27_theme%20%7D%7D") no-repeat;
+        width: 16px;
+        height: 16px;
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+        -webkit-background-size: 16px auto;
+        background-size: 16px auto;
+        margin-left: 15px;
+    }
+    .gnbWrapFull .gnbWrap .topBar .rightArea .btnMobileSearch.close {
+        float: left;
+        background: url("../images/FRj4Fj4s0eeD.png") no-repeat;
+        width: 16px;
+        height: 16px;
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+        -webkit-background-size: 16px auto;
+        background-size: 16px auto;
+        margin-left: 15px;
+    }
+    /*// mobile search btn style 추가 GT디자인가이드_20 190227*/
+
+    .topBanner .mainTopBanner .bannerArea {
+        padding: 20px 45px 20px 15px;
+        height: auto;
+        background: #f6f3f2;
+        z-index: 60;
+    } /* GT디자인가이드_20 190304 */
+}
+
+/* layerPopup */
+.layerPop .layerPopArea .popCont .btnWrap {
+    width: 140px;
+    min-width: auto;
+    margin: auto;
+}
+.layerPop .layerPopArea .popCont {
+    padding: 60px;
+    background: #fff;
+    text-align: center;
+    padding: 50px;
+} /* GT디자인가이드_20 190228*/
+.layerPop .layerPopArea .popCont .icoNoti {
+    display: block;
+    text-indent: -9999px;
+    width: 45px;
+    height: 45px;
+    background: url("../images/czlc5lJ2S7xz.png") no-repeat;
+    margin: 0 auto;
+} /* GT디자인가이드_20 190228 (BG경로 변경)*/
+.layerPop .layerPopArea .popCont .icoNoti1 {
+    display: block;
+    text-indent: -9999px;
+    width: 45px;
+    height: 45px;
+    background: url("../images/czlc5lJ2S7xz.png") no-repeat;
+    margin: 0 auto;
+} /* GT디자인가이드_20 190228 (BG경로 변경)*/
+.layerPop .layerPopArea .popCont .conArea {
+    /*text-align:left;*/
+    text-align: center;
+    margin-bottom: 40px;
+} /* GT디자인가이드_20 190228*/
+.layerPop .layerPopArea .popCont .btnWrap .btn {
+    margin-top: 30px;
+    padding-bottom: 0;
+    width: 140px;
+} /* GT디자인가이드_20 190228 추가*/
+
+/* layerPop mobile일 때 */ /*GT디자인가이드_20 190228 추가*/
+@media screen and (max-width: 767px) {
+    .layerPop .layerPopArea {
+        width: 90% !important;
+    } /* 기본이 700px */
+    .layerPop .layerPopArea .popCont .btnWrap {
+        width: 100%;
+        min-width: 100%;
+        margin: auto;
+    }
+    .layerPop .layerPopArea .popCont .btnWrap .btn {
+        margin-top: 0px;
+        padding-bottom: 0;
+        width: 100%;
+        min-width: 100%;
+        display: block;
+        line-height: 50px;
+    }
+}
+
+/* SAVO, No Component : search */
+.sectionWrap .headArea .tWrap.searchSect .titInner {
+} /*GT디자인가이드_20-1 190305 추가*/ /*190329*/
+.sectionWrap .headArea .searchSect .searchTit {
+}
+.sectionWrap .headArea .searchSect .inputBox {
+    margin: 0 auto 10px auto;
+}
+.sectionWrap .headArea .searchSect .searchResultWrap {
+    width: 608px;
+    margin: 80px auto 0;
+    text-align: left;
+    width: 870px;
+} /*GT디자인가이드_20 190226*/
+.sectionWrap .headArea .searchSect .searchResultWrap.sectionInner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.sectionWrap .headArea .searchSect .searchResultWrap dl.searchResult {
+    display: flex;
+}
+.sectionWrap .headArea .searchSect .searchResultWrap dl.searchResult > * {
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+}
+.sectionWrap .headArea .searchSect .searchResultWrap dl.searchResult dt {
+    margin-right: 20px;
+    color: #000;
+}
+.sectionWrap .headArea .searchSect .searchResultWrap dl.searchResult dd {
+    margin-right: 10px;
+    color: #00aad2;
+    text-transform: uppercase;
+}
+.sectionWrap .headArea .searchSect .searchResultWrap.keyword dl {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    height: 100px;
+} /* GT디자인가이드_20 190225 */
+
+/*search result style*/ /*GT디자인가이드_20 190228 추가*/
+.searchresultArea.searchSect {
+    width: 100%;
+    height: auto; /*search result for 여러줄처리_190521*/
+    background: #fff;
+    overflow: hidden;
+}
+.searchresultArea.searchSect .searchResultWrap .searchResult {
+    line-height: 70px;
+    height: auto; /*search result for 여러줄처리_190521*/
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.searchresultArea.searchSect .searchResultWrap dl.searchResult dt {
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1240px) {
+    /* GT디자인가이드_20 190225 추가*/
+    .sectionWrap .headArea .searchSect .searchResultWrap {
+        width: 608px;
+    }
+    .sectionWrap .headArea .tWrap.searchSect {
+        padding-bottom: 0;
+    }
+    .sectionWrap .headArea .searchSect .searchResultWrap.sectionInner {
+        width: 100%;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    .sectionWrap .headArea .searchSect .searchResultWrap.keyword dl {
+        width: 608px;
+    }
+    .sectionWrap .headArea .searchSect .searchResultWrap.keyword dl.searchResult dt {
+        display: table;
+    }
+    .sectionWrap .searchresultArea.searchSect .searchResultWrap .searchResult {
+        width: 100% !important; /*max-width: 100%;*/
+        max-width: 768px;
+    }
+    /* //GT디자인가이드_20 190225 추가*/
+}
+
+@media screen and (max-width: 767px) {
+    .sectionWrap .headArea .searchSect .searchResultWrap {
+        width: auto;
+    }
+    /* GT디자인가이드_20 190305 추가*/
+    .sectionWrap .headArea .tWrap.searchSect {
+        align-items: flex-start;
+        height: 250px;
+    } /*190329*/
+    .sectionWrap .headArea .tWrap.searchSect .titInner {
+        padding: 34px 20px 25px 20px;
+    } /*190329*/
+    .sectionWrap .headArea .searchSect .searchResultWrap dl.searchResult > * {
+        font-size: 14px;
+    } /*canaria는 텍스트가 길어 16px > 14px로 변경*/
+    .searchresultArea.searchSect .searchResultWrap .searchResult {
+        max-width: 100%;
+        min-width: 290px;
+    }
+}
+
+/* input search
+=======================*/
+.sectionWrap .inputBox.widXLg {
+    width: 815px !important;
+} /* GT디자인가이드_20 190225 추가*/
+.sectionWrap .btnReset {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    text-indent: -9999px;
+    text-align: center;
+    background: url("../images/AyRC8aHxCHfP.png") no-repeat center center;
+    box-sizing: border-box;
+} /* GT디자인가이드_20 190227 추가됨*/
+
+@media screen and (max-width: 1024px) {
+    .contentWrap .searchArea {
+        width: 608px !important;
+    }
+    .contentWrap .searchArea .search {
+        width: 608px !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .contentWrap .searchArea .search {
+        width: 95% !important;
+    }
+    .sectionWrap .headArea .searchSect .searchResultWrap.keyword dl {
+        width: 95%;
+    }
+}
+
+/* from Component */
+/* noComponent > search list */
+.secFindAccWrap.searchConts {
+    padding-top: 60px !important;
+    background: #fff;
+} /*GT디자인가이드_20 190225*/ /*190319*/
+
+/* search engine list style */ /*GT디자인가이드_20 190225 추가*/ /*190319*/
+.secFindAccWrap.searchConts .subTitM {
+    line-height: 1.5;
+} /*190319*/
+.secFindAccWrap.searchConts .subTitM .num {
+    display: none;
+} /*190319*/
+.gridbox.searchEngine {
+    margin-bottom: 50px;
+}
+.gridbox.searchEngine li {
+    border-bottom: none;
+    padding: 0;
+    position: relative;
+}
+.gridbox.searchEngine li .txtArea {
+    float: right;
+    width: 824px;
+    margin-left: 0;
+}
+.gridbox.searchEngine li .imgArea {
+    float: left;
+    width: 256px;
+}
+.gridbox.searchEngine li .txtArea .Tit {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000;
+    font-family: "HyundaiMedium";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    height: 1.2em;
+}
+.gridbox.searchEngine li .txtArea .Sub {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.gridbox.searchEngine li .txtArea.onlytxt {
+    width: 100%;
+    display: block;
+} /*190418*/
+.gridbox.searchEngine li .btnwrap {
+    width: 824px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 296px;
+} /*190418*/ /*190422*/
+.gridbox.searchEngine li .btnwrap .colWd {
+    width: 250px;
+    float: left;
+    margin-right: 15px;
+} /*190610 PC CTA 버튼 크기 조절*/
+.gridbox.searchEngine li .btnwrap .colWd .btn {
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    cursor: pointer;
+    padding: 0;
+} /* padding:0 190426*/
+.gridbox.searchEngine li .btnwrap .colWd .btn:hover {
+    text-decoration: underline;
+}
+.gridbox.searchEngine li .imgArea.none {
+    display: none;
+}
+.gridbox.searchEngine li .txtArea .Sub .link {
+    margin-right: 15px;
+    line-height: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #002c5f;
+}
+.gridbox.searchEngine li .alink a.link {
+    margin-right: 15px;
+    line-height: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #002c5f;
+    cursor: pointer;
+}
+/* 190418 삭제 */
+.searchConts .gridbox.searchEngine li .txtArea .Sub {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    height: 2.5em;
+} /*190426*/ /*PC에서도 2줄 표시 190425*/
+.gridbox.search.searchEngine li {
+    display: none;
+    border-bottom: none;
+} /*190419*/
+.gridbox.search.searchEngine li:after {
+    display: none;
+}
+
+.secFindAccWrap.searchConts .result_none .txtList li {
+    background: url(../images/gQmByyzxQlw6.gif) no-repeat 0 12px;
+    padding-left: 12px;
+    height: 100px;
+    line-height: 25px;
+} /*190524 검색결과없음 줄간격 조정*/
+
+/* search engine loadmore BTN style GT디자인가이드_20 190226 */ /*190319*/
+.sectionWrap .btnWrap.loadmore.searchEngine .colWd {
+    min-width: 200px;
+}
+
+/* search engine list style 반응형 */ /*GT디자인가이드_20 190225*/ /*190319*/
+@media (max-width: 1240px) {
+    /* noComponent > search list */
+    .searchConts .subTitM {
+        font-size: 25px;
+        margin-top: 0;
+    } /*GT디자인가이드_20 190227*/
+    .gridbox.search li .txtArea {
+        width: 73%;
+    }
+    .gridbox.searchEngine li .btnwrap {
+        width: 73%;
+        left: auto;
+        right: 0;
+    } /*GT디자인가이드_20 190227*/
+}
+@media (max-width: 1024px) {
+    /* noComponent > search list */
+    .gridbox.search li {
+        margin: 0 0 30px 0;
+        padding: 0 0 30px 0;
+        margin-bottom: 10px;
+    } /*GT디자인가이드_20 190306*/
+    /* 190418 삭제 */
+
+    .searchConts {
+        padding-top: 30px !important;
+    }
+    .gridbox.search li .txtArea {
+        width: 66%;
+    }
+    .gridbox.search li .imgArea {
+        width: 30%;
+    } /*GT디자인가이드_20 190306*/
+
+    .searchConts .txtArea .Tit {
+        margin-bottom: 14px;
+        font-size: 19px;
+        line-height: 24px;
+    }
+    .searchConts .txtArea .numTxt {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .searchConts .txtArea .Sub {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .searchConts .noTit {
+        margin-bottom: 16px;
+        font-size: 17px;
+        line-height: 22px;
+    }
+    .searchConts .nosub {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    /* search engine list style 1024px 추가 */ /* GT디자인가이드_20 190227*/
+    .searchConts .searchEngineList1 .gridbox.search.searchEngine li {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    } /*190419*/
+    .gridbox.searchEngine li .txtArea {
+        width: 66%;
+    }
+    .gridbox.searchEngine li .txtArea .Tit {
+        margin-bottom: 8px;
+        font-size: 20px;
+        line-height: 28px;
+        color: #000;
+        font-family: "HyundaiMedium";
+    }
+    .searchConts .gridbox.searchEngine li .txtArea.onlytxt {
+        width: 100%;
+    }
+    .searchConts .gridbox.searchEngine li .txtArea .Sub {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* 라인수 */
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+        line-height: 1.2em;
+        height: 2.4em;
+    }
+    .gridbox.searchEngine li .btnwrap {
+        width: 100%;
+        left: 0;
+    }
+    .gridbox.searchEngine li .btnwrap .colWd {
+        width: 33%;
+        margin-right: 0.5%;
+    }
+    .gridbox.searchEngine li .btnwrap .colWd:last-child {
+        margin-right: 0;
+    }
+    /* // search engine list style 1024px */ /* GT디자인가이드_20 190227*/
+}
+@media (max-width: 767px) {
+    .searchConts .searchEngineList1 .gridbox.search.searchEngine li {
+        margin-bottom: 30px;
+    } /*190419*/
+    .gridbox.search li .txtArea {
+        width: 100%;
+        float: none;
+    }
+    .gridbox.search li .imgArea {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin-top: 30px;
+    }
+
+    /* search engine list style 767px */ /* GT디자인가이드_20 190227*/
+    .secFindAccWrap.searchConts {
+        padding-top: 30px !important;
+    }
+    .searchConts .subTitM {
+        font-size: 25px;
+        margin-top: 0;
+    }
+    .searchConts .subTitM .num {
+        display: inline-block;
+    }
+    .gridbox.searchEngine {
+        margin-bottom: 20px;
+    }
+    .gridbox.searchEngine li .txtArea {
+        width: 100%;
+        max-width: 767px;
+    }
+    .gridbox.searchEngine li .alink a.link {
+        display: none;
+    }
+    .gridbox.searchEngine li .imgArea {
+        width: 100%;
+        max-width: 767px;
+        margin: 0 0 20px 0;
+    }
+    .gridbox.searchEngine li .btnwrap .colWd .btn_m {
+        display: none;
+    }
+    .btnWrap.loadmore.searchEngine .colWd {
+        min-width: 100%;
+    }
+    /* //search engine list style 767px */ /* GT디자인가이드_20 190227*/
+
+    .gridbox.searchEngine li .txtArea .Tit {
+    }
+}
+/* search engine list style 끝 */
+
+/* search bar input css 추가 */ /* GT디자인가이드_20 190227*/
+.contentWrap .searchArea {
+    width: 1120px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -230px;
+    z-index: 10;
+} /*190527 검색어입력창 위치 조정*/
+.searchArea .inputWrap.search {
+    width: 870px;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+}
+.searchArea .inputWrap.search .inputBox {
+    position: relative;
+    font-weight: normal;
+    margin: 0 !important;
+    padding-right: 55px;
+}
+.searchArea .inputWrap.search .inputBox .inputSearch {
+    width: 100%;
+    border: 0;
+    font-size: 14px;
+    line-height: 50px;
+    height: 50px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.searchArea .inputWrap.search .inputBox .inputSearch::-ms-clear {
+    display: none;
+}
+.searchArea .inputWrap.search .btnSearch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 55px;
+    text-align: center;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url("../btn-search_1.html") no-repeat center center;
+    overflow: hidden;
+    text-indent: -99999px;
+    background: url("../images/O1z3JJdov52O.png") no-repeat center center;
+} /*GT디자인가이드_20 190225*/
+.searchArea .inputWrap.search .btnReset {
+    /*display:none;*/
+    position: absolute;
+    right: 60px;
+    top: 25px;
+    margin-top: -10px;
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url("../btn-reset.html") no-repeat center center;
+    text-indent: -99999px;
+    background: url("../images/SQFA4cV1F65I.png") no-repeat center center;
+}
+.searchArea .inputWrap.search .btnReset.on {
+    display: block;
+}
+.searchArea .inputWrap.search .autoSearchList {
+    background: #fff; /*display:none;*/
+    position: absolute;
+    left: 0; /*top:50px;*/
+    width: 100%;
+}
+.searchArea .inputWrap.search .autoSearch {
+    border-top: 1px solid #063162;
+    background: #fff;
+    text-align: left;
+    margin: 0 auto; /*width:532px;*/
+    padding: 12px 20px;
+}
+.searchArea .inputWrap.search .autoSearchList .list .link {
+    display: block;
+    font-size: 16px;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.searchArea .inputWrap.search .autoSearchList .list .link .keyword {
+    background: 0;
+    color: #00a1c7;
+    font-family: "HyundaiMedium";
+}
+/* // search bar input css */
+
+/* recent search css 추가 (최근 검색어) */ /*GT디자인가이드_20 190228*/
+.searchArea .inputWrap.search .autoSearchList {
+    display: none;
+}
+.searchArea .inputWrap.search .autoSearchList.on {
+    display: block;
+}
+.searchArea .inputWrap.search .autoSearchList.recentSearch .autoSearch {
+    padding-bottom: 0px;
+}
+.searchArea .inputWrap.search .autoSearchList.recentSearch .list {
+    position: relative;
+    text-transform: uppercase;
+}
+.searchArea .inputWrap.search .autoSearchList.recentSearch .list .link {
+    color: #666;
+}
+.searchArea .inputWrap.search .autoSearchList.recentSearch .list .link .keyword {
+    color: #000;
+    font-family: "HyundaiMedium";
+}
+.searchArea .inputWrap.search .autoSearchList.recentSearch .btn-delete {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 10px;
+    background: url("../images/vXmInkX186yP.gif") no-repeat center center;
+    text-indent: -99999px;
+}
+.searchArea .inputWrap.search .autoSearchList.recentSearch .all_delete {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.searchArea .inputWrap.search .autoSearchList.recentSearch .all_delete .btn_all_delete {
+    color: #999;
+    text-align: left;
+    padding: 20px 0;
+    margin: 0 20px;
+    border-top: 1px solid #d8d8d8;
+}
+/* //recent search css 추가 (최근 검색어) */ /*GT디자인가이드_20 190228*/
+
+/* recent search css 반응형 추가 */ /* GT디자인가이드_20 190228*/
+@media screen and (max-width: 1240px) {
+    .sectionWrap .searchArea {
+        width: 100% !important;
+        max-width: 100%;
+    } /*190527 검색어입력창 위치 조정*/
+    .contentWrap .searchArea {
+        padding: 0;
+        top: -215px;
+    } /*190527 검색어입력창 위치 조정*/
+    .searchArea .inputWrap.search {
+        width: 608px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /*190610 검색어입력창 위치 조정*/
+    .contentWrap .searchArea {
+        padding: 0;
+        top: -230px;
+    } /*190610 검색어입력창 위치 조정*/
+    .searchArea .inputWrap.search .inputBox {
+        padding-right: 50px;
+    }
+    .searchArea .inputWrap.search .inputBox .inputSearch {
+    }
+    .searchArea .inputWrap.search .btnReset {
+        right: 60px;
+    }
+    .searchArea .inputWrap.search .btnSearch {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contentWrap .searchArea {
+        min-width: 300px;
+        top: -240px;
+    } /*190527 검색어입력창 위치 조정*/
+    .inputBox,
+    .searchArea .inputWrap.search {
+        width: 95% !important;
+    }
+    .searchArea .inputWrap.search .btnSearch {
+    }
+    .searchArea .inputWrap.search .inputBox .inputSearch {
+        width: 100% !important;
+    }
+    .searchArea .inputWrap.search .autoSearchList .list {
+        display: none;
+    }
+    .searchArea .inputWrap.search .autoSearchList .list:nth-child(1),
+    .searchArea .inputWrap.search .autoSearchList .list:nth-child(2),
+    .searchArea .inputWrap.search .autoSearchList .list:nth-child(3),
+    .searchArea .inputWrap.search .autoSearchList.recentSearch .list:nth-child(4) {
+        display: block;
+    }
+}
+/* //recent search css 반응형 GT디자인가이드_20 190228*/
+
+/* noComponent > siteMap */
+.siteMapWrap {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 0px;
+    margin-top: 30px;
+} /*GT디자인가이드_20 190306*/
+.siteMapWrap ul.siteMapList li.dep1 .btnOpenClose {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1120px;
+    height: 103px;
+    font-size: 30px;
+    line-height: 103px;
+    color: #000;
+    font-family: "HyundaiMedium";
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    border-top: solid 1px #d8d8d8;
+    font-size: 25px;
+} /*GT디자인가이드_20 190306*/
+
+@media screen and (max-width: 1120px) {
+    /* noComponent > siteMap */
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont {
+        width: 100%;
+        padding: 11px 0 112px 0;
+    }
+}
+@media screen and (max-width: 1024px) {
+    /* noComponent > siteMap */
+    .siteMapConts {
+        padding: 50px 0 70px 0 !important;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .btnOpenClose {
+        width: 100%;
+        width: 100%;
+        padding: 0;
+        height: 60px;
+        line-height: 60px;
+        font-size: 19px;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .btnOpenClose:after,
+    .siteMapWrap ul.siteMapList li.dep1.on .btnOpenClose:after {
+        top: 24px;
+        width: 16px;
+        height: 10px;
+        background-size: 100%;
+    }
+
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont {
+        padding: 30px 0 45px 0;
+    } /* 180911-1 defect */
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl {
+        width: 33.3%;
+    } /* 180911-1 defect */
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dt {
+        font-size: 19px;
+        line-height: 24px;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dt a {
+        font-size: 16px;
+        line-height: 20px;
+    } /* 180911-1 defect */
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dd {
+        margin-top: 19px;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dd {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dd a {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* noComponent > siteMap */
+    .siteMapConts {
+        padding: 30px 0 70px 0 !important;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont {
+        padding: 38px 0 43px 0;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl {
+        width: 50%;
+        max-width: 100%;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl {
+        margin-bottom: 29px;
+    }
+    /*.siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dt {display: none;}*/
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dt a {
+        font-size: 14px;
+        line-height: 21px;
+    } /* 180911-1 defect */
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl dd {
+        margin-top: 18px;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont .siteMapInfo dl dd {
+        margin-top: 4px;
+    }
+    .siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl.ddMt dd {
+        margin-top: 4px;
+    }
+    /*.siteMapWrap ul.siteMapList li.dep1 .siteMapContWrap .siteMapCont dl {float:left;max-width:224px;width: 20%;padding-bottom: 30px;}*/
+}
+
+/*keyvisual search Type*/ /* popular search 추가 190329 */
+.searchWord {
+    left: 0;
+    bottom: 37px;
+    font-size: 14px;
+    color: #666666;
+    overflow: hidden;
+}
+.searchWord .tit {
+    float: left;
+    font-size: 16px;
+    color: #000;
+    font-family: "HyundaiMedium";
+    margin-right: 20px;
+    line-height: 1.5;
+} /*190329*/
+.searchWordlist {
+    display: table;
+    font-size: 0;
+    float: left;
+    line-height: 1.5;
+    margin-top: 2px;
+}
+.searchWordlist .link {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 1.5;
+    color: #00aad2;
+}
+.searchWordlist .link:hover {
+    text-decoration: underline;
+}
+.btnRightWrap {
+    position: absolute;
+    right: 0;
+    bottom: 31px;
+}
+
+@media screen and (max-width: 767px) {
+    .searchWord {
+        font-size: 14px;
+        color: #666666;
+        overflow: hidden;
+        text-align: left;
+    }
+    .searchWord .tit {
+        font-size: 14px;
+        color: #000;
+        font-family: "HyundaiMedium";
+        margin-right: 20px;
+        line-height: 1;
+        margin-bottom: 70px;
+    } /*190524 모바일 인기검색어 영역 조정*/
+    .searchWordlist {
+        display: table;
+        font-size: 0;
+        float: left;
+        line-height: 1;
+        margin-top: 2px;
+    }
+    .searchWordlist .link {
+        font-size: 12px;
+        display: inline-block;
+        margin-right: 10px;
+        line-height: 1;
+        color: #00aad2;
+    }
+}
+
+/*검색어창 list a width 지정 190418*/
+.searchArea .inputWrap.search .autoSearchList .list a {
+    width: 800px;
+}
+.gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .list .link {
+    width: 510px;
+}
+@media screen and (max-width: 1240px) {
+    .searchArea .inputWrap.search .autoSearchList .list a {
+        width: 535px;
+    }
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .list .link {
+        width: 370px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .searchArea .inputWrap.search .autoSearchList .list a,
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .list .link {
+        width: 93%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .searchArea .inputWrap.search .autoSearchList .list a,
+    .gnbWrapFull .gnbSearchArea .gnbSearch .gnbautoSearchList.recentSearch .list .link {
+        width: 90%;
+    }
+}
